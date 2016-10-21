@@ -3,4 +3,4 @@
 This website is currently in development.
 When finalized, the URL will be provided.
 
-The pcrepair directory contains the settings.py and base URLs
+The pcrepair directory contains the settings.py file and base URLs.
