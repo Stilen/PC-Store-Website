@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+    <div class="container">
+
+
+    {% if all_products %}
+    <!-- Albums -->
+        <div class="col-sm-12">
+                <h2>Produtos</h2>
+                <br>
+        </div>
+
+        <div class="row.row-eq-height">
+
+            {% for product in all_products %}
+                <div class="col-sm-4">
+                    <div class="thumbnail">
+                        <div style="height: 150px">
+                            <a class="prodthumb" href="{% url 'products:detail' product.id %}">
+                                <img src="{{ product.logo.url }}" class="img-responsive prodthumb" style="padding: 10px;max-height: 150px">
+                            </a>
+                        </div>
+                        <div class="caption">
+                            <h4>{{ product.title }}</h4>
+                            <h5>Preço: {{ product.price }}€</h5>
+                            <div style="text-align: right;padding: 5px">
+                                <a href="{% url 'products:detail' product.id %}" class="btn btn-default btn-sm" role="button">Ver Detalhes &raquo;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+
+    {% else %}
+
+    <h3 style="color: #6a6a6a">Não existem produtos disponíveis de momento.</h3>
+
+    {% endif %}
+
+    </div>
+
+
+{% endblock %}

@@ -1,0 +1,215 @@
+body {
+	background-color:#fcfcfc;
+}
+
+.prodthumb{
+    justify-content: center;
+}
+
+.row {
+   margin-left:0;
+   margin-right:0;
+}
+
+/* make the well swell */
+.well {
+	border-color:#eee;
+}
+
+.item h4 a {
+  color: #333;
+}
+
+.item img.image {
+  max-width: 100%;
+  margin-top: 9px;
+}
+
+.info {
+	padding:4px;
+}
+
+/* Isotope Transitions
+------------------------------- */
+.isotope,
+.isotope .item {
+  -webkit-transition-duration: 0.8s;
+     -moz-transition-duration: 0.8s;
+      -ms-transition-duration: 0.8s;
+       -o-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+}
+
+.isotope {
+  -webkit-transition-property: height, width;
+     -moz-transition-property: height, width;
+      -ms-transition-property: height, width;
+       -o-transition-property: height, width;
+          transition-property: height, width;
+}
+
+.isotope .item {
+  -webkit-transition-property: -webkit-transform, opacity;
+     -moz-transition-property:    -moz-transform, opacity;
+      -ms-transition-property:     -ms-transform, opacity;
+       -o-transition-property:         top, left, opacity;
+          transition-property:         transform, opacity;
+}
+
+
+/* responsive media queries */
+
+@media (max-width: 768px) {
+  header h1 small {
+    display: block;
+  }
+
+  header div.description {
+    padding-top: 9px;
+    padding-bottom: 4px;
+  }
+
+  .isotope .item {
+    position: static ! important;
+    -webkit-transform: translate(0px, 0px) ! important;
+       -moz-transform: translate(0px, 0px) ! important;
+            transform: translate(0px, 0px) ! important;
+  }
+}
+
+/*-----------------------------------*/
+.panel-group,
+ .panel-group .panel,
+ .panel-group .panel-heading,
+ .panel-group .panel-heading a,
+ .panel-group .panel-title,
+ .panel-group .panel-title a,
+ .panel-group .panel-body,
+ .panel-group .panel-group .panel-heading + .panel-collapse > .panel-body  {
+    border-radius:2px;
+    border:0;
+}
+.panel-group .panel-heading + .panel-collapse > .panel-body {
+  border-top: 0;
+}
+
+
+ .panel-group .panel-heading {
+    padding: 0;
+}
+ .panel-group .panel-heading a {
+    display: block;
+    background: #508bb1;
+    color:#fff;
+    padding:15px;
+     text-decoration:none;
+   position: relative;
+}
+ .panel-group .panel-heading a.collapsed {
+    background: #c4ced5;
+    color:inherit;
+}
+
+ .panel-group .panel-heading a:after {
+    content: '-';
+    position: absolute;
+    right: 20px;
+}
+ .panel-group .panel-heading a.collapsed:after {
+    content: '+';
+}
+ .panel-group .panel-collapse {
+    margin-top:5px!important;
+}
+ .panel-group .panel-body  {
+    background: #f7f7f7;
+    padding:15px;
+}
+ .panel-group .panel {
+  background-color: transparent;
+}
+
+.panel-group .panel-body p:last-child,
+.panel-group .panel-body  ul:last-child,
+.panel-group .panel-body  ol:last-child {
+  margin-bottom: 0;
+}
+
+/* -------------------------------- */
+.navbar {
+  border-radius: 0 !important;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+    padding-top: 10px;
+  background: white url('images/back.jpg');
+  padding-bottom: 250px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+    height: 230px;
+  padding-top: 20px;
+  color: white;
+  background-color: #545454;
+}
+
+#map {
+    height: 400px;
+    width: 100%;
+}
+
+.carousel-inner>.item>img, .carousel-inner>.item>a>img {
+display: block;
+height: auto;
+max-width: 100%;
+line-height: 1;
+width: 100%; // Add this
+}
+
+
+.myLinks{
+	color: black;
+	font-size: 20px;
+}
+
+.divLink{
+	padding-top: 30px
+}
+
+.carousel {
+   max-width:1500px;
+   margin:auto
+}
+
+#header{
+    background: white;
+}
+
+.carousel .item {
+    width: 100%; /*slider width*/
+    max-height: 600px; /*slider height*/
+}
+.carousel .item img {
+    width: 100%; /*img width*/
+}
+
+
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+
+.spaced{
+    padding-left: 3%;
+    padding-right: 3%;
+}
+/*----------------------------------*/

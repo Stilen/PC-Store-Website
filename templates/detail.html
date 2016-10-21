@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+    <div class="container">
+
+    {% if product %}
+    <!-- Albums -->
+        <div class="row.row-eq-height">
+
+            <div class="col-sm-10 col-sm-offset-1">
+                <a class="btn btn-default" href="{% url 'products:products' %}">« Voltar</a>
+                <hr>
+            </div>
+
+                <div class="col-sm-10 col-sm-offset-1">
+                    <div class="thumbnail">
+                        <a href="#">
+                            <img src="{{ product.logo.url }}" class="img-responsive">
+                        </a>
+                        <div class="caption">
+                            <h3>{{ product.title }}</h3>
+                            <h4>{{ product.price }}€</h4>
+                            <hr>
+                            <p>{{ product.description|linebreaks }}</p>
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+    {% else %}
+
+    <h3 style="color: #6a6a6a">Este produto não existe.</h3>
+
+    {% endif %}
+
+    </div>
+
+
+{% endblock %}

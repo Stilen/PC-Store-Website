@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block body %}
+<div class="container">
+
+
+    <div class="row">
+
+        <div class="col-sm-8 col-sm-offset-2">
+            <p>Estamos aqui para o ajudar. Caso tenha dúvidas, sugestões, reclamações, ou queira discutir algum assunto que não se
+            se encontra aqui tratado não hesite em contactar-nos. Iremos responder-lhe por email com a maior brevidade possível.</p>
+            <p>Se preferir, pode contactar-nos por telefone ou dirigir-se à <a href="{% url 'about:about' %}#map">loja física.</a></p>
+            <br>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-8 col-sm-offset-2">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <h3 style="padding-bottom: 10px">Contacte-nos</h3>
+                    <form action="{% url 'contact:contact' %}" method="post">{% csrf_token %}
+                        {% if messages %}
+                            <ul class="messages">
+                                {% for message in messages %}
+                                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}
+                                style="color: green; list-style-type: none;;"><strong>{{ message }}</strong></li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
+                        {{ form|crispy }}
+                        <div class="col-sm-10">
+                            <div class="g-recaptcha" data-sitekey="{{ RECAPTCHA_SITE_KEY }}" data-callback="enableBtn"></div>
+                        </div>
+                        <div  class="col-sm-offset-9 col-sm-2">
+                            <button type="submit" id="submitButton" class="btn btn-primary">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

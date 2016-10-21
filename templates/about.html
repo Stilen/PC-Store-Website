@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+    <div class="container">
+
+    <div class="row">
+
+        <div class="col-sm-4">
+            <h3>Sobre nós</h3>
+
+            <p>A PC Repair é uma loja sediada no Intermarché de Olhão.
+            Aqui encontra profissionais interessados e experientes em informática e reparações.</p>
+            <p>Com vários anos de experiência e formação, dedicamo-nos sempre a garantir a satisfação do cliente.
+            Os nossos diagnósticos demoram em média apenas entre 4 e 24 horas.</p>
+            <p>Além disto, disponibilizamos também outros serviços, como criação e gestão de redes e desenvolvimento de aplicações web.</p>
+            <p>Contacte-nos ou venha visitar-nos, ficamos à sua espera!</p>
+        </div>
+
+        <div class="col-sm-8">
+            <img width="100%" src="https://scontent-mad1-1.xx.fbcdn.net/v/t1.0-9/12310444_112998189069956_5610664593337366478_n.jpg?oh=27f6ddd22c63cd3f5cd08bf2df7dc46f&oe=587B7765">
+        </div>
+
+    </div>
+
+
+    <hr>
+    <div class="row">
+
+
+        <a name="#map"><div class="col-sm-9">
+            <div id="map"></div>
+                <script>
+                    function initMap() {
+                        var store = {lat: 37.032060, lng: -7.832582};
+                        var map = new google.maps.Map(document.getElementById('map'), {
+                            zoom: 16,
+                            center: store
+                        });
+                        var marker = new google.maps.Marker({
+                            position: store,
+                            map: map
+                        });
+                    }
+                </script>
+                <script async defer
+                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWzTPszFcbXKj6K7-2h4jleLsftM7G_nc&callback=initMap">
+                </script>
+        </div></a>
+
+        <div class="col-sm-3">
+            <h3>Localização</h3>
+            <address>
+                    <strong>PC Repair</strong>
+                    <br>Loja nº2, Intermarché
+                    <br>Olhão, 8700-228
+                    <br>
+            </address>
+            <h3>Contactos</h3>
+            <address>
+                    <span class="glyphicon glyphicon-earphone"><abbr title="Telefone"></span> </abbr>(+351) 289 112 490
+                    <br>
+                    <span class="glyphicon glyphicon-envelope"></span> <a href="mailto:algarverepair@gmail.com" >algarverepair@gmail.com</a>
+            </address>
+        </div>
+
+    </div>
+
+
+    </div>
+
+{% endblock %}
